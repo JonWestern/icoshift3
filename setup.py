@@ -5,25 +5,20 @@ from copy import copy
 #import distribute_setup
 #distribute_setup.use_setuptools()
 
-from setuptools import setup, find_packages
+import setuptools
 
-setup(
+setuptools.setup(
+    name="example-pkg-cwestern", # Replace with your own username
+    version="0.0.1",
+    author="Charley Western",
+    author_email="westernj@lafayette.edu",
+    description="Spectral Icoshift updated for python v.3",
+    url="https://github.com/Sour-Smelno/icoshift.git",
+   
+    python_requires='>=3.0',
 
-    name='icoshift',
-    version='1.0',
-    author='Martin Fitzpatrick',
-    author_email='martin.fitzpatrick@gmail.com',
-    url='https://github.com/mfitzp/icoshift',
-    download_url='https://github.com/mfitzp/icoshift/zipball/master',
-    description='icoshift: A versatile tool for the rapid alignment of 1D NMR spectra',
-    long_description='Python (numpy+scipy) implementation of icoshift, an open source and highly efficient \
-        program designed for solving signal alignment \
-        problems in metabonomic NMR data analysis. The icoshift algorithm is based on correlation shifting \
-        of spectral intervals and employs an FFT engine that aligns all spectra simultaneously. \
-        Translated from MATLAB code using smop and manual adjustments. \
-        ',
 
-    packages=['icoshift'],
+    packages=['icoshift-py3'],
     include_package_data=True,
     package_data={
         '': ['*.txt', '*.rst', '*.md'],
