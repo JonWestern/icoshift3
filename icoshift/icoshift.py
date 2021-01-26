@@ -844,9 +844,10 @@ def cc_fft_shift(t, x=False, options=numpy.array([])):
 
             limits = remove_nan(
                 numpy.array([0, np - 1]).reshape(1, -1), x_fft[:, i_signal].reshape(1, -1), numpy.all)
+            
 
             if limits.shape != (2, 1):
-                raise(Exception, 'Missing values can be handled only if leading or trailing')
+                #raise(Exception, 'Missing values can be handled only if leading or trailing')
 
             if numpy.any(cat(1, limits[0], mp - limits[1]) > numpy.max(abs(options[0:2]))):
                 raise(Exception, 'Missing values band larger than largest admitted shift')
@@ -854,7 +855,7 @@ def cc_fft_shift(t, x=False, options=numpy.array([])):
             miss_off[i_signal] = limits[0]
 
             if numpy.any(miss_off[i_signal-1] > 1):
-                x_fft[0:limits[1] - limits[0] + 1,
+                x_fft[0:limits[1] - limits[0] + 1, #watch out right here -cw 1/25/21
                       i_signal] = x_fft[limits[0]:limits[1], i_signal]
 
             if limits[1] < np:
