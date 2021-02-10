@@ -5,7 +5,7 @@ import setuptools
 
 setuptools.setup(
     name="icoshift3", # Replace with your own username
-    version="0.0.3",
+    version="0.0.4",
     author="Charley Western",
     author_email="westernj@lafayette.edu",
     description="Spectral Icoshift updated for python v.3",
