@@ -1,24 +1,20 @@
 #!/usr/bin/env python
 # coding=utf-8
-import sys
-from copy import copy
-#import distribute_setup
-#distribute_setup.use_setuptools()
 
 import setuptools
 
 setuptools.setup(
-    name="example-pkg-cwestern", # Replace with your own username
-    version="0.0.1",
+    name="icoshift3", # Replace with your own username
+    version="0.0.3",
     author="Charley Western",
     author_email="westernj@lafayette.edu",
     description="Spectral Icoshift updated for python v.3",
-    url="https://github.com/Sour-Smelno/icoshift.git",
+    url="https://github.com/JonWestern/icoshift3.git",
    
     python_requires='>=3.0',
 
 
-    packages=['icoshift-py3'],
+    packages=['icoshift3'],
     include_package_data=True,
     package_data={
         '': ['*.txt', '*.rst', '*.md'],

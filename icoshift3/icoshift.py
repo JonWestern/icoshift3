@@ -235,8 +235,10 @@ def icoshift(xt,  xp,  inter='whole',  n='f', scale=None, coshift_preprocessing=
             xt = numpy.zeros((1, xp.shape[1]))
             max_flag = True
 
-    nt, mt = xt.shape
+    nt = xt.shape
+    mt = 1
     np, mp = xp.shape
+
 
     if mt != mp:
         raise(Exception, 'Target "xt" and sample "xp" must have the same number of columns')
